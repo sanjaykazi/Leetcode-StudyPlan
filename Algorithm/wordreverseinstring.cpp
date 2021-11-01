@@ -1,13 +1,26 @@
-string reverseWords(string s) {
-        stringstream ss(s);
+//inclide string for
+#include <string>
+#include <iostream>
+using namespace std;
+//include sstream::
+#include <sstream>
+//include vector for
+#include <vector>
+//include algorithm for
+#include <algorithm>
 
-        string result = "";
-        string token = "";
+string reverseWords(string s)
+{
+    stringstream ss(s);
 
-        while(ss >> token) {
-            reverse(begin(token), end(token));
-            result += token + " ";
-        }
+    string result = "";
+    string token = "";
 
-        return result.substr(0, result.length()-1);
+    while (ss >> token)
+    {
+        reverse(begin(token), end(token));
+        result += token + " ";
     }
+
+    return result.substr(0, result.length() - 1);
+}
