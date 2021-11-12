@@ -43,7 +43,7 @@ struct TreeNode
 };
 bool isValidBST(TreeNode *root)
 {
-  if (root == NULL)
+  if (root == nullptr)
     return true;
   if (root->left == NULL && root->right == NULL)
     return true;
